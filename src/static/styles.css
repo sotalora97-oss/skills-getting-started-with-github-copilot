@@ -159,11 +159,45 @@ footer {
 }
 
 .participants-list {
-  list-style-type: disc;
-  margin-left: 20px;
+  /* Hide default bullets so we can render a custom layout */
+  list-style: none;
+  margin-left: 0;
   margin-bottom: 0;
+  padding-left: 0;
   color: #333;
   font-size: 15px;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px;
+}
+
+.participant-email {
+  flex: 1 1 auto;
+  word-break: break-all;
+}
+
+.remove-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.remove-participant:hover {
+  background-color: rgba(198, 40, 40, 0.08);
+}
+
+.remove-participant svg {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
 }
 
 .no-participants {
